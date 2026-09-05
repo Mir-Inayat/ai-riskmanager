@@ -1,12 +1,21 @@
 # Dependencies
-node_modules/
-.next/
-__pycache__/
+**/node_modules/
+**/.next/
+**/__pycache__/
 *.pyc
 *.pyo
 
-# Data (too large for GitHub)
-data/
+# Ignore raw huge datasets & local sqlite db
+data/raw/
+data/*.db
+data/audit_log.db
+
+# Explicitly keep trained models and processed metrics for cloud deployment
+!data/models/
+!data/models/*
+!data/processed/
+!data/processed/*
+!data/README.md
 
 # Environment
 .env
@@ -17,13 +26,11 @@ build/
 .venv/
 venv/
 
-# IDE
+# IDE & OS
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# OS
 .DS_Store
 Thumbs.db
 

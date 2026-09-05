@@ -1,0 +1,33 @@
+{
+  "precision": 0.537,
+  "recall": 0.9355,
+  "prAuc": 0.8818,
+  "recallAtBudget": 1.0,
+  "preventableExposureCaptured": 0.9459,
+  "falsePositiveCost": 3750.0,
+  "f1": 0.6824,
+  "rocAuc": 0.9637,
+  "expectedCost": 7770.52,
+  "netPreventedExposure": 41557.16,
+  "totalTransactions": 900,
+  "totalFraudTransactions": 31,
+  "totalFraudExposure": 49327.68,
+  "capturedFraudExposure": 46657.16,
+  "missedFraudExposure": 2670.52,
+  "reviewCost": 1350.0,
+  "operatingParameters": {
+    "decisionThreshold": 0.08499999999999999,
+    "customerFrictionCostFP": 150.0,
+    "analystReviewCost": 25.0,
+    "dailyReviewBudget": 100,
+    "testDurationDays": 31.9,
+    "reviewCapacityTotal": 900
+  },
+  "confusionMatrix": {
+    "tp": 29,
+    "fp": 25,
+    "tn": 844,
+    "fn": 2
+  },
+  "name": "Trained Model (LightGBM/Calibrated)"
+}

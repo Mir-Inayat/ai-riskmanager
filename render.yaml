@@ -1,0 +1,32 @@
+services:
+  # 1. FastAPI Backend (AI Risk Engine API)
+  - type: web
+    name: aegis-api
+    runtime: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: PORT
+        value: 10000
+
+  # 2. Next.js Frontend (Operations Dashboard)
+  - type: web
+    name: aegis-dashboard
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.9.0
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          type: web
+          name: aegis-api
+          property: host

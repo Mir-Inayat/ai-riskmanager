@@ -1,0 +1,79 @@
+{
+  "dataset_name": "IEEE-CIS Fraud Detection (Chronological Partition)",
+  "provenance": "Vesta Corporation & IEEE-CIS",
+  "fraud_class": "payment-transaction fraud risk (isFraud)",
+  "created_at": "2026-09-01T07:23:38.025303+00:00",
+  "total_records": 6000,
+  "split_protocol": {
+    "axis": "TransactionDT",
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "global_dt_min": 1407,
+    "global_dt_max": 17863825
+  },
+  "splits": {
+    "train": {
+      "split": "train",
+      "rows": 4200,
+      "dt_min": 1407,
+      "dt_max": 12494449,
+      "fraud_count": 218,
+      "fraud_rate": 0.0519,
+      "total_transaction_amount": 764923.42,
+      "total_fraud_amount": 362362.67
+    },
+    "val": {
+      "split": "val",
+      "rows": 900,
+      "dt_min": 12500139,
+      "dt_max": 15103748,
+      "fraud_count": 48,
+      "fraud_rate": 0.0533,
+      "total_transaction_amount": 152749.4,
+      "total_fraud_amount": 75260.81
+    },
+    "test": {
+      "split": "test",
+      "rows": 900,
+      "dt_min": 15105537,
+      "dt_max": 17863825,
+      "fraud_count": 31,
+      "fraud_rate": 0.0344,
+      "total_transaction_amount": 131418.35,
+      "total_fraud_amount": 49327.68
+    }
+  },
+  "columns": {
+    "all": [
+      "TransactionID",
+      "isFraud",
+      "TransactionDT",
+      "TransactionAmt",
+      "ProductCD",
+      "card1",
+      "card2",
+      "card3",
+      "card4",
+      "card5",
+      "card6",
+      "addr1",
+      "addr2",
+      "dist1",
+      "P_emaildomain",
+      "R_emaildomain",
+      "C1",
+      "C2",
+      "D1",
+      "D2",
+      "V1",
+      "V257",
+      "DeviceType",
+      "DeviceInfo",
+      "id_30",
+      "id_31"
+    ],
+    "feature_count": 24,
+    "target": "isFraud"
+  }
+}
