@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    {"id": "TXN-98234-A", "group": "transaction", "val": 10},
+    {"id": "device_hash_123", "group": "device", "val": 5},
+    {"id": "email_domain_xyz.com", "group": "email", "val": 5},
+    {"id": "TXN-99999-Z", "group": "transaction_prior_fraud", "val": 10}
+  ],
+  "links": [
+    {"source": "TXN-98234-A", "target": "device_hash_123"},
+    {"source": "TXN-98234-A", "target": "email_domain_xyz.com"},
+    {"source": "TXN-99999-Z", "target": "device_hash_123"}
+  ]
+}

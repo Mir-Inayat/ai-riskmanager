@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --sidebar-width: 260px;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background: #F3F4F8;
+  color: #1E293B;
+  overflow-x: hidden;
+}
+
+/* Clean scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Selection */
+::selection {
+  background: rgba(99, 102, 241, 0.2);
+  color: #1E293B;
+}
+
+/* Utility: Subtle gradient for KPI cards */
+.kpi-gradient-brand {
+  background: linear-gradient(135deg, #6366F1 0%, #818CF8 100%);
+}
+.kpi-gradient-success {
+  background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+}
+.kpi-gradient-warning {
+  background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+}
+.kpi-gradient-danger {
+  background: linear-gradient(135deg, #EF4444 0%, #F87171 100%);
+}

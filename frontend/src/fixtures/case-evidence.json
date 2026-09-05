@@ -1,0 +1,32 @@
+{
+  "shapContributions": [
+    {"feature": "TransactionAmt", "contribution": 0.35},
+    {"feature": "card1_velocity_24h", "contribution": 0.22},
+    {"feature": "P_emaildomain_new", "contribution": 0.15},
+    {"feature": "dist1", "contribution": -0.05}
+  ],
+  "ruleTriggers": [
+    {
+      "ruleId": "RULE-001",
+      "severity": "HIGH",
+      "explanation": "Transaction amount is >99th percentile for this card."
+    },
+    {
+      "ruleId": "RULE-045",
+      "severity": "MEDIUM",
+      "explanation": "First time seeing this email domain for this device."
+    }
+  ],
+  "graphContext": {
+    "clusterId": "CLUSTER-77X",
+    "sharedAttributes": ["device_hash_123", "email_domain_xyz.com"],
+    "clusterSize": 12
+  },
+  "costBreakdown": {
+    "expectedFraudLoss": 40050.44,
+    "frictionCostIfFP": 150.00,
+    "reviewCost": 25.00,
+    "netExposure": 39875.44
+  },
+  "auditHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

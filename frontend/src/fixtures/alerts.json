@@ -1,0 +1,35 @@
+[
+  {
+    "transactionId": "TXN-98234-A",
+    "timestamp": 1693564800000,
+    "amount": 45000.50,
+    "riskScore": 0.89,
+    "decision": "SIMULATED_HOLD",
+    "reasonCodes": ["HIGH_VALUE_TRANSACTION", "NEW_EMAIL_DOMAIN"],
+    "expectedCost": 40050.44,
+    "linkedEntityCount": 4,
+    "modelVersion": "lgbm-v1.0"
+  },
+  {
+    "transactionId": "TXN-11234-B",
+    "timestamp": 1693565000000,
+    "amount": 2500.00,
+    "riskScore": 0.65,
+    "decision": "REVIEW",
+    "reasonCodes": ["VELOCITY_SPIKE"],
+    "expectedCost": 1625.00,
+    "linkedEntityCount": 2,
+    "modelVersion": "lgbm-v1.0"
+  },
+  {
+    "transactionId": "TXN-88234-C",
+    "timestamp": 1693566000000,
+    "amount": 120.00,
+    "riskScore": 0.12,
+    "decision": "ALLOW",
+    "reasonCodes": [],
+    "expectedCost": 14.40,
+    "linkedEntityCount": 0,
+    "modelVersion": "lgbm-v1.0"
+  }
+]
